@@ -6,7 +6,7 @@
     <title>Projects · Kailash Nelson</title>
     <meta
       name="description"
-      content="Selected software projects: Terminal Tetris, an Akari constraint solver, and the Lizard Repairs booking platform."
+      content="Selected software projects: ClubHub, NGames, Terminal Tetris, a Morse translator, an Akari constraint solver, and the Lizard Repairs booking platform."
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +30,7 @@
         <div class="masthead">
           <h1 class="page-title">Projects</h1>
           <p class="page-intro">
-            A short list of things I have shipped — systems coursework, a constraint solver, and a booking product used by real customers.
+            Things I have shipped — club operations software, a booking product used by real customers, games, and systems coursework.
           </p>
         </div>
       </div>
@@ -38,6 +38,22 @@
 
     <main id="main">
       <div class="wrap">
+        <article class="section project">
+          <h2 class="section-title">Product</h2>
+          <div class="project-head">
+            <div>
+              <span class="project-name">ClubHub</span>
+              <span class="stack"> · Python, Streamlit, SQLite</span>
+            </div>
+          </div>
+          <p>
+            A club operations app with two Streamlit surfaces: an admin dashboard and a member portal.
+            SQLite stores prospects, members, events, RSVPs, and attendance as separate tables, so interest can be collected
+            before someone becomes a member. Admins convert prospects, manage events, and track check-ins; members RSVP and check in themselves.
+          </p>
+          <p><a href="https://github.com/KingLizard1020/clubhub">GitHub</a></p>
+        </article>
+
         <article class="section project">
           <h2 class="section-title">Product</h2>
           <div class="project-head">
@@ -54,6 +70,21 @@
         </article>
 
         <article class="section project">
+          <h2 class="section-title">Apps</h2>
+          <div class="project-head">
+            <div>
+              <span class="project-name">NGames</span>
+              <span class="stack"> · Flutter, Dart, Firebase</span>
+            </div>
+          </div>
+          <p>
+            A cross-platform mobile collection of Wordle, Hangman, and Snake with Material Design 3, dark/light themes,
+            saved progress, a high-score leaderboard, and Firebase auth.
+          </p>
+          <p><a href="https://github.com/KingLizard1020/Ngames">GitHub</a></p>
+        </article>
+
+        <article class="section project">
           <h2 class="section-title">Systems</h2>
           <div class="project-head">
             <div>
@@ -65,6 +96,22 @@
             A cross-platform Tetris clone that runs in the terminal. It implements seven-bag randomization, a ghost piece, lock delay,
             HUD animations, and automated tests wired through Make.
           </p>
+          <p><a href="https://github.com/KingLizard1020/TetrisInC">GitHub</a></p>
+        </article>
+
+        <article class="section project">
+          <h2 class="section-title">CLI</h2>
+          <div class="project-head">
+            <div>
+              <span class="project-name">Morse-code translator</span>
+              <span class="stack"> · Python</span>
+            </div>
+          </div>
+          <p>
+            A full-screen terminal UI with two live panes: type English or Morse and the other side updates instantly.
+            Supports letters, digits, and common punctuation.
+          </p>
+          <p><a href="https://github.com/KingLizard1020/Morse-code-translator">GitHub</a></p>
         </article>
 
         <article class="section project">
