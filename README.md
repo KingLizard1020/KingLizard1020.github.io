@@ -1,8 +1,8 @@
 # kailashnelson.github.io
 
-Personal site for [Kailash Nelson](https://kinglizard1020.github.io), hosted on GitHub Pages.
+Personal site for [Kailash Nelson](https://kailashnelson.com), hosted on GitHub Pages.
 
-The GitHub account is `KingLizard1020`, so the user-site repo is `KingLizard1020.github.io`.
+The GitHub account is `KingLizard1020`, so the user-site repo is `KingLizard1020.github.io`. The custom domain is `kailashnelson.com`.
 
 - Home is a web version of the resume
 - Projects and About are short extra pages
