@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects · Kailash Nelson</title>
+    <meta
+      name="description"
+      content="Selected software projects: Terminal Tetris, an Akari constraint solver, and the Lizard Repairs booking platform."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=Source+Sans+3:ital,wght@0,400;0,650;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="about.html">About</a>
+          <a class="pdf" href="Kailash_Nelson_Resume.pdf">Resume</a>
+        </nav>
+        <div class="masthead">
+          <h1 class="page-title">Projects</h1>
+          <p class="page-intro">
+            A short list of things I have shipped — systems coursework, a constraint solver, and a booking product used by real customers.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="wrap">
+        <article class="section project">
+          <h2 class="section-title">Product</h2>
+          <div class="project-head">
+            <div>
+              <span class="project-name">Lizard Repairs booking platform</span>
+              <span class="stack"> · React, PayPal</span>
+            </div>
+          </div>
+          <p>
+            Built and maintained the customer-facing site for Lizard Repairs, the electronics repair business I ran for six years.
+            The React app handled booking, PayPal billing, and status updates so intake was not a pile of texts and spreadsheets.
+          </p>
+          <p><a href="https://lizardrepairs.com">LizardRepairs.com</a></p>
+        </article>
+
+        <article class="section project">
+          <h2 class="section-title">Systems</h2>
+          <div class="project-head">
+            <div>
+              <span class="project-name">Terminal Tetris</span>
+              <span class="stack"> · C, ncurses, Make</span>
+            </div>
+          </div>
+          <p>
+            A cross-platform Tetris clone that runs in the terminal. It implements seven-bag randomization, a ghost piece, lock delay,
+            HUD animations, and automated tests wired through Make.
+          </p>
+        </article>
+
+        <article class="section project">
+          <h2 class="section-title">Algorithms</h2>
+          <div class="project-head">
+            <div>
+              <span class="project-name">“Akari” AI constraint solver</span>
+              <span class="stack"> · C++, backtracking</span>
+            </div>
+          </div>
+          <p>
+            Places bulbs for Akari (Light Up) puzzles with backtracking and aggressive pruning. The solver validates inputs and
+            reports conflicting constraints instead of failing silently.
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">Kailash Nelson · Golden, CO</div>
+    </footer>
+  </body>
+</html>

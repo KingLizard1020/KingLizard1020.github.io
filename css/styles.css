@@ -1,0 +1,293 @@
+:root {
+  --paper: #f3eee4;
+  --ink: #1c1814;
+  --muted: #5c564e;
+  --line: #d6cfc2;
+  --accent: #9c3d1e;
+  --max: 44rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0.75rem;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.4rem 0.75rem;
+}
+
+.skip:focus {
+  left: 0.75rem;
+  z-index: 2;
+}
+
+.wrap {
+  width: min(var(--max), calc(100% - 2.5rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 1.25rem 0 0;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+  justify-content: flex-end;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+}
+
+.nav .pdf {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.masthead {
+  padding: 2.75rem 0 1.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.name {
+  margin: 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 3.35rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.tagline {
+  margin: 0.85rem 0 0;
+  max-width: 38rem;
+  color: var(--muted);
+  font-size: 1.08rem;
+  font-style: italic;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.4rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.contact li:not(:last-child)::after {
+  content: "·";
+  margin-left: 0.4rem;
+  color: var(--line);
+}
+
+main {
+  padding: 0.5rem 0 3.5rem;
+}
+
+.section {
+  padding: 1.7rem 0 0.2rem;
+}
+
+.section-title {
+  margin: 0 0 0.85rem;
+  color: var(--accent);
+  font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.role,
+.project,
+.lead {
+  margin: 0 0 1.25rem;
+}
+
+.role-head,
+.project-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.15rem 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.role-title,
+.project-name {
+  font-weight: 650;
+}
+
+.meta {
+  color: var(--muted);
+}
+
+.dates {
+  color: var(--muted);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.bullets {
+  margin: 0.25rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.bullets li {
+  margin: 0.15rem 0;
+}
+
+.degree {
+  margin: 0.15rem 0 0.35rem;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem 1.5rem;
+  margin: 0;
+}
+
+.skills dt {
+  font-weight: 650;
+}
+
+.skills dd {
+  margin: 0.1rem 0 0;
+  color: var(--muted);
+}
+
+.prose p {
+  margin: 0 0 1rem;
+  max-width: 40rem;
+}
+
+.page-title {
+  margin: 0;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  font-weight: 500;
+}
+
+.page-intro {
+  margin: 0.6rem 0 1.5rem;
+  color: var(--muted);
+  max-width: 38rem;
+}
+
+.stack {
+  color: var(--muted);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 1.25rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    width: min(var(--max), calc(100% - 1.75rem));
+  }
+
+  .nav {
+    justify-content: flex-start;
+  }
+
+  .masthead {
+    padding-top: 1.75rem;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .dates {
+    white-space: normal;
+  }
+}
+
+@media print {
+  :root {
+    --paper: #fff;
+    --ink: #000;
+    --muted: #333;
+    --accent: #000;
+    --line: #999;
+  }
+
+  body {
+    font-size: 11pt;
+    background: #fff;
+  }
+
+  .skip,
+  .nav,
+  .site-footer {
+    display: none;
+  }
+
+  .wrap {
+    width: auto;
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .masthead,
+  .section {
+    break-inside: avoid;
+  }
+}
