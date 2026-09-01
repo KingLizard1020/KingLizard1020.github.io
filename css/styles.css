@@ -271,8 +271,7 @@ main {
   }
 
   .skip,
-  .nav,
-  .site-footer {
+  .nav {
     display: none;
   }
 

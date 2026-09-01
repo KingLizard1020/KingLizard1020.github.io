@@ -7,3 +7,5 @@ The GitHub account is `KingLizard1020`, so the user-site repo is `KingLizard1020
 - Home is a web version of the resume
 - Projects and About are short extra pages
 - [Kailash_Nelson_Resume.pdf](Kailash_Nelson_Resume.pdf) is the downloadable resume
+
+Copyright (c) 2026 Kailash Nelson. All rights reserved. See [LICENSE](LICENSE).
