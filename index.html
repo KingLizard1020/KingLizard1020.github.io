@@ -9,40 +9,107 @@
       content="Software engineer with production distributed-systems experience, an applied CS/EE foundation, and six years of entrepreneurship."
     />
     <link rel="canonical" href="https://kailashnelson.com/" />
+    <meta name="author" content="Kailash Nelson" />
     <meta name="copyright" content="Copyright 2026 Kailash Nelson" />
+    <meta name="theme-color" content="#f3eee4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=Source+Sans+3:ital,wght@0,400;0,650;0,700;1,400&display=swap"
-      rel="stylesheet"
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kailash Nelson" />
+    <meta property="og:title" content="Kailash Nelson" />
+    <meta
+      property="og:description"
+      content="Software engineer with production distributed-systems experience, an applied CS/EE foundation, and six years of entrepreneurship."
     />
+    <meta property="og:url" content="https://kailashnelson.com/" />
+    <meta property="og:image" content="https://kailashnelson.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kailash Nelson" />
+    <meta
+      name="twitter:description"
+      content="Software engineer with production distributed-systems experience, an applied CS/EE foundation, and six years of entrepreneurship."
+    />
+    <meta name="twitter:image" content="https://kailashnelson.com/og-image.png" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kailash Nelson",
+        "url": "https://kailashnelson.com/",
+        "email": "mailto:kailashnelson1020@gmail.com",
+        "jobTitle": "Software engineer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Golden",
+          "addressRegion": "CO",
+          "addressCountry": "US"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Colorado School of Mines"
+        },
+        "sameAs": [
+          "https://github.com/KingLizard1020",
+          "https://www.linkedin.com/in/kailashnelson"
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="wrap">
+      <div class="wrap header-bar">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">KN</span>
+          <span class="brand-name">Kailash Nelson</span>
+        </a>
         <nav class="nav" aria-label="Primary">
           <a href="index.html" aria-current="page">Home</a>
           <a href="projects.html">Projects</a>
           <a href="about.html">About</a>
           <a class="pdf" href="Kailash_Nelson_Resume.pdf">Resume</a>
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.6A8.2 8.2 0 1 1 9.4 4 6.7 6.7 0 0 0 20 14.6z"></path>
+            </svg>
+          </button>
         </nav>
-        <div class="masthead">
-          <h1 class="name">Kailash Nelson</h1>
-          <p class="tagline">
-            Software engineer with production distributed-systems experience, applied ML/CS/EE foundation, and 6+ years of entrepreneurship.
-          </p>
-          <ul class="contact">
-            <li>Golden, CO</li>
-            <li><a href="mailto:kailashnelson1020@gmail.com">kailashnelson1020@gmail.com</a></li>
-            <li><a href="https://linkedin.com/in/kailashnelson">LinkedIn</a></li>
-            <li><a href="https://github.com/KingLizard1020">GitHub</a></li>
-          </ul>
-        </div>
       </div>
     </header>
+
+    <div class="hero">
+      <div class="wrap">
+        <h1 class="name">Kailash Nelson</h1>
+        <p class="tagline">
+          Software engineer with production distributed-systems experience, applied ML/CS/EE foundation, and 6+ years of entrepreneurship.
+        </p>
+        <ul class="contact">
+          <li>Golden, CO</li>
+          <li><a href="mailto:kailashnelson1020@gmail.com">kailashnelson1020@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/kailashnelson" rel="me noopener noreferrer" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/KingLizard1020" rel="me noopener noreferrer" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
 
     <main id="main">
       <div class="wrap">
@@ -130,12 +197,12 @@
             </div>
             <ul class="bullets">
               <li>Built and scaled a premier electronics repair brand serving 500+ clients with enterprise-grade SLAs.</li>
-              <li>Shipped and maintained a React booking platform with PayPal billing to automate customer intake and status updates; later migrated it to <a href="https://kailashnelson1020.wixsite.com/mysite">Wix</a> so the site would stay online after I stopped taking repairs.</li>
+              <li>Shipped and maintained a React booking platform with PayPal billing to automate customer intake and status updates; later migrated it to <a href="https://kailashnelson1020.wixsite.com/mysite" rel="noopener noreferrer" target="_blank">Wix</a> so the site would stay online after I stopped taking repairs.</li>
             </ul>
           </article>
         </section>
 
-        <section class="section" aria-labelledby="projects">
+        <section class="section project-index" aria-labelledby="projects">
           <h2 class="section-title" id="projects">Technical Projects</h2>
 
           <article class="project">
@@ -146,7 +213,7 @@
               </div>
             </div>
             <ul class="bullets">
-              <li>Built a club-ops app with a SQLite member/event model, prospect intake, RSVPs, and check-ins, plus Streamlit admin and member portals. <a href="https://github.com/KingLizard1020/clubhub">GitHub</a></li>
+              <li>Built a club-ops app with a SQLite member/event model, prospect intake, RSVPs, and check-ins, plus Streamlit admin and member portals. <a href="https://github.com/KingLizard1020/clubhub" rel="noopener noreferrer" target="_blank">GitHub</a></li>
             </ul>
           </article>
 
@@ -158,7 +225,7 @@
               </div>
             </div>
             <ul class="bullets">
-              <li>Shipped a cross-platform terminal Tetris clone with seven-bag randomization, ghost piece, lock delay, HUD animations, and Make-wired automated tests. <a href="https://github.com/KingLizard1020/TetrisInC">GitHub</a></li>
+              <li>Shipped a cross-platform terminal Tetris clone with seven-bag randomization, ghost piece, lock delay, HUD animations, and Make-wired automated tests. <a href="https://github.com/KingLizard1020/TetrisInC" rel="noopener noreferrer" target="_blank">GitHub</a></li>
             </ul>
           </article>
 
@@ -170,7 +237,7 @@
               </div>
             </div>
             <ul class="bullets">
-              <li>Shipped a Flutter game collection (Wordle, Hangman, Snake) with saved progress, a leaderboard, and Firebase auth. <a href="https://github.com/KingLizard1020/Ngames">GitHub</a></li>
+              <li>Shipped a Flutter game collection (Wordle, Hangman, Snake) with saved progress, a leaderboard, and Firebase auth. <a href="https://github.com/KingLizard1020/Ngames" rel="noopener noreferrer" target="_blank">GitHub</a></li>
             </ul>
           </article>
 
@@ -220,7 +287,11 @@
     </main>
 
     <footer class="site-footer">
-      <div class="wrap">&copy; 2026 Kailash Nelson. All rights reserved.</div>
+      <div class="wrap footer-inner">
+        <p>&copy; 2026 Kailash Nelson. All rights reserved. Last updated <time datetime="2026-09-04">September 4, 2026</time>.</p>
+        <p><a href="mailto:kailashnelson1020@gmail.com">kailashnelson1020@gmail.com</a></p>
+      </div>
     </footer>
+    <script src="js/theme.js"></script>
   </body>
 </html>

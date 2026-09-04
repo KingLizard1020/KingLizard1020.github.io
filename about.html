@@ -9,55 +9,142 @@
       content="Kailash Nelson is a software engineer in Golden, Colorado, with a CS/EE background, distributed-systems internship experience, and six years running a repair business."
     />
     <link rel="canonical" href="https://kailashnelson.com/about.html" />
+    <meta name="author" content="Kailash Nelson" />
     <meta name="copyright" content="Copyright 2026 Kailash Nelson" />
+    <meta name="theme-color" content="#f3eee4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=Source+Sans+3:ital,wght@0,400;0,650;0,700;1,400&display=swap"
-      rel="stylesheet"
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kailash Nelson" />
+    <meta property="og:title" content="About · Kailash Nelson" />
+    <meta
+      property="og:description"
+      content="Kailash Nelson is a software engineer in Golden, Colorado, with a CS/EE background, distributed-systems internship experience, and six years running a repair business."
     />
+    <meta property="og:url" content="https://kailashnelson.com/about.html" />
+    <meta property="og:image" content="https://kailashnelson.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About · Kailash Nelson" />
+    <meta
+      name="twitter:description"
+      content="Kailash Nelson is a software engineer in Golden, Colorado, with a CS/EE background, distributed-systems internship experience, and six years running a repair business."
+    />
+    <meta name="twitter:image" content="https://kailashnelson.com/og-image.png" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kailash Nelson",
+        "url": "https://kailashnelson.com/",
+        "email": "mailto:kailashnelson1020@gmail.com",
+        "jobTitle": "Software engineer",
+        "sameAs": [
+          "https://github.com/KingLizard1020",
+          "https://www.linkedin.com/in/kailashnelson"
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="wrap">
+      <div class="wrap header-bar">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">KN</span>
+          <span class="brand-name">Kailash Nelson</span>
+        </a>
         <nav class="nav" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="projects.html">Projects</a>
           <a href="about.html" aria-current="page">About</a>
           <a class="pdf" href="Kailash_Nelson_Resume.pdf">Resume</a>
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.6A8.2 8.2 0 1 1 9.4 4 6.7 6.7 0 0 0 20 14.6z"></path>
+            </svg>
+          </button>
         </nav>
-        <div class="masthead">
-          <h1 class="page-title">About</h1>
-        </div>
       </div>
     </header>
 
+    <div class="hero">
+      <div class="wrap">
+        <h1 class="page-title">About</h1>
+      </div>
+    </div>
+
     <main id="main">
-      <div class="wrap prose">
-        <p>
-          I am a software engineer in Golden, Colorado. I studied Computer Science with a minor in Electrical Engineering at
-          Colorado School of Mines, and I care about systems that stay correct when the happy path is not the only path.
-        </p>
-        <p>
-          In summer 2026 I interned at Checkr, where I moved monthly customer invoicing onto Temporal and replaced a
-          production-console close process with a self-service operator UI. Before that I spent six years running
-          Lizard Repairs, an electronics repair shop, including the booking site customers used to schedule work.
-          After I closed the shop I moved that site to <a href="https://kailashnelson1020.wixsite.com/mysite">Wix</a>
-          so it would stay online without keeping the custom domain.
-        </p>
-        <p>
-          I have also studied abroad at Budapest University of Technology and SKEMA Business School. If you want the
-          one-page version, the <a href="index.html">home page</a> is the resume, and you can
-          <a href="Kailash_Nelson_Resume.pdf">download the PDF</a>.
-        </p>
+      <div class="wrap about-layout">
+        <div class="prose">
+          <p>
+            I am a software engineer in Golden, Colorado. I studied Computer Science with a minor in Electrical Engineering at
+            Colorado School of Mines, and I care about systems that stay correct when the happy path is not the only path.
+          </p>
+          <p>
+            In summer 2026 I interned at Checkr, where I moved monthly customer invoicing onto Temporal and replaced a
+            production-console close process with a self-service operator UI. Before that I spent six years running
+            Lizard Repairs, an electronics repair shop, including the booking site customers used to schedule work.
+            After I closed the shop I moved that site to <a href="https://kailashnelson1020.wixsite.com/mysite" rel="noopener noreferrer" target="_blank">Wix</a>
+            so it would stay online without keeping the custom domain.
+          </p>
+          <p>
+            I have also studied abroad at Budapest University of Technology and SKEMA Business School. If you want the
+            one-page version, the <a href="index.html">home page</a> is the resume, and you can
+            <a href="Kailash_Nelson_Resume.pdf">download the PDF</a>.
+          </p>
+        </div>
+        <dl class="facts">
+          <div>
+            <dt>Location</dt>
+            <dd>Golden, CO</dd>
+          </div>
+          <div>
+            <dt>Education</dt>
+            <dd>B.S. Computer Science, Colorado School of Mines (May 2026)</dd>
+          </div>
+          <div>
+            <dt>Recently</dt>
+            <dd>Software Engineering Intern, Checkr</dd>
+          </div>
+          <div>
+            <dt>Elsewhere</dt>
+            <dd>
+              <ul>
+                <li><a href="mailto:kailashnelson1020@gmail.com">Email</a></li>
+                <li><a href="https://github.com/KingLizard1020" rel="me noopener noreferrer" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/kailashnelson" rel="me noopener noreferrer" target="_blank">LinkedIn</a></li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
       </div>
     </main>
 
     <footer class="site-footer">
-      <div class="wrap">&copy; 2026 Kailash Nelson. All rights reserved.</div>
+      <div class="wrap footer-inner">
+        <p>&copy; 2026 Kailash Nelson. All rights reserved. Last updated <time datetime="2026-09-04">September 4, 2026</time>.</p>
+        <p><a href="mailto:kailashnelson1020@gmail.com">kailashnelson1020@gmail.com</a></p>
+      </div>
     </footer>
+    <script src="js/theme.js"></script>
   </body>
 </html>
