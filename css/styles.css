@@ -1,13 +1,11 @@
 :root {
   --paper: #f3eee4;
-  --paper-2: #ebe4d6;
   --ink: #1c1814;
   --muted: #4a453d;
   --line: #d6cfc2;
   --accent: #9c3d1e;
   --accent-hover: #7a3018;
   --card: #faf7f0;
-  --header: color-mix(in srgb, var(--paper) 86%, transparent);
   --max: 48rem;
   --radius: 0.85rem;
   --shadow: 0 1px 2px color-mix(in srgb, var(--ink) 6%, transparent);
@@ -16,28 +14,24 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --paper: #16130f;
-    --paper-2: #1e1a15;
     --ink: #f3eee4;
     --muted: #b7aea3;
     --line: #3d362c;
     --accent: #e08a5c;
     --accent-hover: #f0a57a;
     --card: #1c1814;
-    --header: color-mix(in srgb, var(--paper) 82%, transparent);
     --shadow: 0 1px 2px rgb(0 0 0 / 35%);
   }
 }
 
 :root[data-theme="dark"] {
   --paper: #16130f;
-  --paper-2: #1e1a15;
   --ink: #f3eee4;
   --muted: #b7aea3;
   --line: #3d362c;
   --accent: #e08a5c;
   --accent-hover: #f0a57a;
   --card: #1c1814;
-  --header: color-mix(in srgb, var(--paper) 82%, transparent);
   --shadow: 0 1px 2px rgb(0 0 0 / 35%);
 }
 
@@ -114,39 +108,7 @@ a:hover {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: var(--header);
-  border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(14px);
-}
-
-.header-bar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.45rem 1rem;
-  min-height: 3.35rem;
-}
-
-.brand {
-  color: var(--ink);
-  font-family: "Newsreader", Georgia, serif;
-  font-size: 1.05rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  text-decoration: none;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.brand:hover {
-  color: var(--ink);
-  text-decoration: none;
+  padding: 1.25rem 0 0;
 }
 
 .nav {
@@ -522,20 +484,7 @@ main {
     width: min(var(--max), calc(100% - 1.75rem));
   }
 
-  .header-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: 0;
-    padding: 0.7rem 0 0.55rem;
-  }
-
-  .brand {
-    overflow: visible;
-    text-overflow: unset;
-  }
-
   .nav {
-    width: 100%;
     justify-content: flex-start;
     gap: 0.75rem 1rem;
     font-size: 0.88rem;
@@ -571,14 +520,12 @@ main {
   :root,
   :root[data-theme="dark"] {
     --paper: #fff;
-    --paper-2: #fff;
     --ink: #000;
     --muted: #333;
     --accent: #000;
     --accent-hover: #000;
     --line: #999;
     --card: #fff;
-    --header: #fff;
   }
 
   body {
