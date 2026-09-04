@@ -9,131 +9,195 @@
       content="Selected software projects: ClubHub, NGames, Terminal Tetris, a Morse translator, an Akari constraint solver, and the Lizard Repairs booking platform."
     />
     <link rel="canonical" href="https://kailashnelson.com/projects.html" />
+    <meta name="author" content="Kailash Nelson" />
     <meta name="copyright" content="Copyright 2026 Kailash Nelson" />
+    <meta name="theme-color" content="#f3eee4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=Source+Sans+3:ital,wght@0,400;0,650;0,700;1,400&display=swap"
-      rel="stylesheet"
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kailash Nelson" />
+    <meta property="og:title" content="Projects · Kailash Nelson" />
+    <meta
+      property="og:description"
+      content="Selected software projects: ClubHub, NGames, Terminal Tetris, a Morse translator, an Akari constraint solver, and the Lizard Repairs booking platform."
     />
+    <meta property="og:url" content="https://kailashnelson.com/projects.html" />
+    <meta property="og:image" content="https://kailashnelson.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Projects · Kailash Nelson" />
+    <meta
+      name="twitter:description"
+      content="Selected software projects: ClubHub, NGames, Terminal Tetris, a Morse translator, an Akari constraint solver, and the Lizard Repairs booking platform."
+    />
+    <meta name="twitter:image" content="https://kailashnelson.com/og-image.png" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kailash Nelson",
+        "url": "https://kailashnelson.com/",
+        "email": "mailto:kailashnelson1020@gmail.com",
+        "jobTitle": "Software engineer",
+        "sameAs": [
+          "https://github.com/KingLizard1020",
+          "https://www.linkedin.com/in/kailashnelson"
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="wrap">
+      <div class="wrap header-bar">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">KN</span>
+          <span class="brand-name">Kailash Nelson</span>
+        </a>
         <nav class="nav" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="projects.html" aria-current="page">Projects</a>
           <a href="about.html">About</a>
           <a class="pdf" href="Kailash_Nelson_Resume.pdf">Resume</a>
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.6A8.2 8.2 0 1 1 9.4 4 6.7 6.7 0 0 0 20 14.6z"></path>
+            </svg>
+          </button>
         </nav>
-        <div class="masthead">
-          <h1 class="page-title">Projects</h1>
-          <p class="page-intro">
-            Things I have shipped. Club operations software, a booking product used by real customers, games, and systems coursework.
-          </p>
-        </div>
       </div>
     </header>
 
+    <div class="hero">
+      <div class="wrap">
+        <h1 class="page-title">Projects</h1>
+        <p class="page-intro">
+          Things I have shipped. Club operations software, a booking product used by real customers, games, and systems coursework.
+        </p>
+      </div>
+    </div>
+
     <main id="main">
       <div class="wrap">
-        <article class="section project">
-          <h2 class="section-title">Product</h2>
-          <div class="project-head">
-            <div>
-              <span class="project-name">ClubHub</span>
-              <span class="stack"> · Python, Streamlit, SQLite</span>
+        <div class="project-groups">
+          <section aria-labelledby="product">
+            <h2 class="section-title" id="product">Product</h2>
+            <div class="card-grid">
+              <article class="card">
+                <p class="card-kicker">Club operations</p>
+                <h3>ClubHub</h3>
+                <span class="stack">Python, Streamlit, SQLite</span>
+                <p>
+                  A club operations app with two Streamlit surfaces: an admin dashboard and a member portal.
+                  SQLite stores prospects, members, events, RSVPs, and attendance as separate tables, so interest can be collected
+                  before someone becomes a member. Admins convert prospects, manage events, and track check-ins; members RSVP and check in themselves.
+                </p>
+                <p><a href="https://github.com/KingLizard1020/clubhub" rel="noopener noreferrer" target="_blank">GitHub</a></p>
+              </article>
+              <article class="card">
+                <p class="card-kicker">Customer booking</p>
+                <h3>Lizard Repairs booking platform</h3>
+                <span class="stack">React, PayPal</span>
+                <p>
+                  Built and maintained the customer-facing site for Lizard Repairs, the electronics repair business I ran for six years.
+                  The original React app handled booking, PayPal billing, and status updates so intake was not a pile of texts and spreadsheets.
+                  After I stopped taking repairs I migrated the site to Wix so it would stay online without paying for the custom domain.
+                </p>
+                <p><a href="https://kailashnelson1020.wixsite.com/mysite" rel="noopener noreferrer" target="_blank">Archived site (Wix)</a></p>
+              </article>
             </div>
-          </div>
-          <p>
-            A club operations app with two Streamlit surfaces: an admin dashboard and a member portal.
-            SQLite stores prospects, members, events, RSVPs, and attendance as separate tables, so interest can be collected
-            before someone becomes a member. Admins convert prospects, manage events, and track check-ins; members RSVP and check in themselves.
-          </p>
-          <p><a href="https://github.com/KingLizard1020/clubhub">GitHub</a></p>
-        </article>
+          </section>
 
-        <article class="section project">
-          <div class="project-head">
-            <div>
-              <span class="project-name">Lizard Repairs booking platform</span>
-              <span class="stack"> · React, PayPal</span>
+          <section aria-labelledby="apps">
+            <h2 class="section-title" id="apps">Apps</h2>
+            <div class="card-grid">
+              <article class="card">
+                <p class="card-kicker">Mobile games</p>
+                <h3>NGames</h3>
+                <span class="stack">Flutter, Dart, Firebase</span>
+                <p>
+                  A cross-platform mobile collection of Wordle, Hangman, and Snake with Material Design 3, dark/light themes,
+                  saved progress, a high-score leaderboard, and Firebase auth.
+                </p>
+                <p><a href="https://github.com/KingLizard1020/Ngames" rel="noopener noreferrer" target="_blank">GitHub</a></p>
+              </article>
             </div>
-          </div>
-          <p>
-            Built and maintained the customer-facing site for Lizard Repairs, the electronics repair business I ran for six years.
-            The original React app handled booking, PayPal billing, and status updates so intake was not a pile of texts and spreadsheets.
-            After I stopped taking repairs I migrated the site to Wix so it would stay online without paying for the custom domain.
-          </p>
-          <p><a href="https://kailashnelson1020.wixsite.com/mysite">Archived site (Wix)</a></p>
-        </article>
+          </section>
 
-        <article class="section project">
-          <h2 class="section-title">Apps</h2>
-          <div class="project-head">
-            <div>
-              <span class="project-name">NGames</span>
-              <span class="stack"> · Flutter, Dart, Firebase</span>
+          <section aria-labelledby="systems">
+            <h2 class="section-title" id="systems">Systems</h2>
+            <div class="card-grid">
+              <article class="card">
+                <p class="card-kicker">Terminal</p>
+                <h3>Terminal Tetris</h3>
+                <span class="stack">C, ncurses, Make</span>
+                <p>
+                  A cross-platform Tetris clone that runs in the terminal. It implements seven-bag randomization, a ghost piece, lock delay,
+                  HUD animations, and automated tests wired through Make.
+                </p>
+                <p><a href="https://github.com/KingLizard1020/TetrisInC" rel="noopener noreferrer" target="_blank">GitHub</a></p>
+              </article>
             </div>
-          </div>
-          <p>
-            A cross-platform mobile collection of Wordle, Hangman, and Snake with Material Design 3, dark/light themes,
-            saved progress, a high-score leaderboard, and Firebase auth.
-          </p>
-          <p><a href="https://github.com/KingLizard1020/Ngames">GitHub</a></p>
-        </article>
+          </section>
 
-        <article class="section project">
-          <h2 class="section-title">Systems</h2>
-          <div class="project-head">
-            <div>
-              <span class="project-name">Terminal Tetris</span>
-              <span class="stack"> · C, ncurses, Make</span>
+          <section aria-labelledby="cli">
+            <h2 class="section-title" id="cli">CLI</h2>
+            <div class="card-grid">
+              <article class="card">
+                <p class="card-kicker">Translator</p>
+                <h3>Morse-code translator</h3>
+                <span class="stack">Python</span>
+                <p>
+                  A full-screen terminal UI with two live panes: type English or Morse and the other side updates instantly.
+                  Supports letters, digits, and common punctuation.
+                </p>
+                <p><a href="https://github.com/KingLizard1020/Morse-code-translator" rel="noopener noreferrer" target="_blank">GitHub</a></p>
+              </article>
             </div>
-          </div>
-          <p>
-            A cross-platform Tetris clone that runs in the terminal. It implements seven-bag randomization, a ghost piece, lock delay,
-            HUD animations, and automated tests wired through Make.
-          </p>
-          <p><a href="https://github.com/KingLizard1020/TetrisInC">GitHub</a></p>
-        </article>
+          </section>
 
-        <article class="section project">
-          <h2 class="section-title">CLI</h2>
-          <div class="project-head">
-            <div>
-              <span class="project-name">Morse-code translator</span>
-              <span class="stack"> · Python</span>
+          <section aria-labelledby="algorithms">
+            <h2 class="section-title" id="algorithms">Algorithms</h2>
+            <div class="card-grid">
+              <article class="card">
+                <p class="card-kicker">Constraint solver</p>
+                <h3>“Akari” AI constraint solver</h3>
+                <span class="stack">C++, backtracking</span>
+                <p>
+                  Places bulbs for Akari (Light Up) puzzles with backtracking and aggressive pruning. The solver validates inputs and
+                  reports conflicting constraints instead of failing silently.
+                </p>
+              </article>
             </div>
-          </div>
-          <p>
-            A full-screen terminal UI with two live panes: type English or Morse and the other side updates instantly.
-            Supports letters, digits, and common punctuation.
-          </p>
-          <p><a href="https://github.com/KingLizard1020/Morse-code-translator">GitHub</a></p>
-        </article>
-
-        <article class="section project">
-          <h2 class="section-title">Algorithms</h2>
-          <div class="project-head">
-            <div>
-              <span class="project-name">“Akari” AI constraint solver</span>
-              <span class="stack"> · C++, backtracking</span>
-            </div>
-          </div>
-          <p>
-            Places bulbs for Akari (Light Up) puzzles with backtracking and aggressive pruning. The solver validates inputs and
-            reports conflicting constraints instead of failing silently.
-          </p>
-        </article>
+          </section>
+        </div>
       </div>
     </main>
 
     <footer class="site-footer">
-      <div class="wrap">&copy; 2026 Kailash Nelson. All rights reserved.</div>
+      <div class="wrap footer-inner">
+        <p>&copy; 2026 Kailash Nelson. All rights reserved. Last updated <time datetime="2026-09-04">September 4, 2026</time>.</p>
+        <p><a href="mailto:kailashnelson1020@gmail.com">kailashnelson1020@gmail.com</a></p>
+      </div>
     </footer>
+    <script src="js/theme.js"></script>
   </body>
 </html>
