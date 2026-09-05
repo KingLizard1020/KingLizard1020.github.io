@@ -381,9 +381,7 @@ main {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: top center;
+  vertical-align: middle;
 }
 
 .card-shots {
