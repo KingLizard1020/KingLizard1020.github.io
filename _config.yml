@@ -17,3 +17,9 @@ defaults:
       type: posts
     values:
       layout: post
+exclude:
+  - README.md
+  - LICENSE
+  - scripts
+  - .htmlvalidate.json
+  - .github

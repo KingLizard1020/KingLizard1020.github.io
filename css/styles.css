@@ -370,6 +370,7 @@ main {
 
 .card-shot {
   margin: 0 0 0.85rem;
+  padding: 0;
   border: 1px solid var(--line);
   border-radius: 0.5rem;
   overflow: hidden;
