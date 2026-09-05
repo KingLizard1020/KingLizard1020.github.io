@@ -57,6 +57,10 @@ def local_path(url: str) -> Path:
         path = path[1:]
     if path in ("", "index.html"):
         return ROOT / "index.html"
+    post = re.fullmatch(r"blog/(\d{4})/(\d{2})/(\d{2})/([^/]+)/?", path)
+    if post:
+        year, month, day, slug = post.groups()
+        return ROOT / "_posts" / f"{year}-{month}-{day}-{slug}.md"
     if path.endswith("/"):
         return ROOT / path / "index.html"
     directory = ROOT / path
