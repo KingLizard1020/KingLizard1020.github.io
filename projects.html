@@ -43,6 +43,8 @@
         } catch (e) {}
       })();
     </script>
+    <link rel="preload" href="css/fonts/newsreader-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="css/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <script type="application/ld+json">
@@ -63,11 +65,7 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
-      <div class="wrap header-bar">
-        <a class="brand" href="index.html">
-          <span class="brand-mark" aria-hidden="true">KN</span>
-          <span class="brand-name">Kailash Nelson</span>
-        </a>
+      <div class="wrap">
         <nav class="nav" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="projects.html" aria-current="page">Projects</a>
@@ -102,7 +100,6 @@
             <h2 class="section-title" id="product">Product</h2>
             <div class="card-grid">
               <article class="card">
-                <p class="card-kicker">Club operations</p>
                 <h3>ClubHub</h3>
                 <span class="stack">Python, Streamlit, SQLite</span>
                 <p>
@@ -113,7 +110,6 @@
                 <p><a href="https://github.com/KingLizard1020/clubhub" rel="noopener noreferrer" target="_blank">GitHub</a></p>
               </article>
               <article class="card">
-                <p class="card-kicker">Customer booking</p>
                 <h3>Lizard Repairs booking platform</h3>
                 <span class="stack">React, PayPal</span>
                 <p>
@@ -130,7 +126,6 @@
             <h2 class="section-title" id="apps">Apps</h2>
             <div class="card-grid">
               <article class="card">
-                <p class="card-kicker">Mobile games</p>
                 <h3>NGames</h3>
                 <span class="stack">Flutter, Dart, Firebase</span>
                 <p>
@@ -146,7 +141,6 @@
             <h2 class="section-title" id="systems">Systems</h2>
             <div class="card-grid">
               <article class="card">
-                <p class="card-kicker">Terminal</p>
                 <h3>Terminal Tetris</h3>
                 <span class="stack">C, ncurses, Make</span>
                 <p>
@@ -162,7 +156,6 @@
             <h2 class="section-title" id="cli">CLI</h2>
             <div class="card-grid">
               <article class="card">
-                <p class="card-kicker">Translator</p>
                 <h3>Morse-code translator</h3>
                 <span class="stack">Python</span>
                 <p>
@@ -178,7 +171,6 @@
             <h2 class="section-title" id="algorithms">Algorithms</h2>
             <div class="card-grid">
               <article class="card">
-                <p class="card-kicker">Constraint solver</p>
                 <h3>“Akari” AI constraint solver</h3>
                 <span class="stack">C++, backtracking</span>
                 <p>
@@ -199,5 +191,10 @@
       </div>
     </footer>
     <script src="js/theme.js"></script>
+    <script
+      data-goatcounter="https://kailashnelson.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js"
+    ></script>
   </body>
 </html>
