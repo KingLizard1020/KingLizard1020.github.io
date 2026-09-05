@@ -10,6 +10,8 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
+# Static pages only. blog/index.html is a Jekyll/Liquid source file (GitHub Pages
+# builds it) and is not HTML-validated here. /blog/ nav links still resolve to it.
 HTML_FILES = ["index.html", "projects.html", "about.html", "404.html"]
 CSS_FILES = ["css/styles.css", "css/fonts.css"]
 
@@ -38,6 +40,8 @@ class AssetParser(HTMLParser):
 def is_local(url: str) -> bool:
     if not url or url.startswith(("#", "mailto:", "tel:", "javascript:", "data:")):
         return False
+    if "{{" in url or "{%" in url:
+        return False
     parsed = urlparse(url)
     if parsed.scheme in {"http", "https"}:
         return parsed.netloc in {"kailashnelson.com", "www.kailashnelson.com"}
@@ -53,6 +57,11 @@ def local_path(url: str) -> Path:
         path = path[1:]
     if path in ("", "index.html"):
         return ROOT / "index.html"
+    if path.endswith("/"):
+        return ROOT / path / "index.html"
+    directory = ROOT / path
+    if directory.is_dir():
+        return directory / "index.html"
     return ROOT / path
 
 

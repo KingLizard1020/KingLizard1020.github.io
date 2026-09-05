@@ -1,0 +1,19 @@
+title: Kailash Nelson
+description: >-
+  Software engineer with production distributed-systems experience,
+  an applied CS/EE foundation, and six years of entrepreneurship.
+url: https://kailashnelson.com
+baseurl: ""
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+permalink: /blog/:year/:month/:day/:title/
+lang: en
+author: Kailash Nelson
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

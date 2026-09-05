@@ -3,16 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Page not found · Kailash Nelson</title>
-    <meta name="description" content="That page is not on kailashnelson.com." />
-    <meta name="robots" content="noindex" />
-    <meta name="author" content="Kailash Nelson" />
+    {% if page.title and page.title != site.title %}
+    {% assign full_title = page.title | append: " · " | append: site.title %}
+    {% else %}
+    {% assign full_title = site.title %}
+    {% endif %}
+    {% if page.description %}
+    {% assign desc = page.description %}
+    {% else %}
+    {% assign desc = site.description %}
+    {% endif %}
+    <title>{{ full_title }}</title>
+    <meta name="description" content="{{ desc | strip | escape }}" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta name="copyright" content="Copyright 2026 {{ site.author }}" />
     <meta name="theme-color" content="#f3eee4" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{{ full_title }}" />
+    <meta property="og:description" content="{{ desc | strip | escape }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:image" content="{{ site.url }}/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ full_title }}" />
+    <meta name="twitter:description" content="{{ desc | strip | escape }}" />
+    <meta name="twitter:image" content="{{ site.url }}/og-image.png" />
     <script>
       (function () {
         try {
@@ -33,7 +56,7 @@
         <nav class="nav" aria-label="Primary">
           <a href="/">Home</a>
           <a href="/projects.html">Projects</a>
-          <a href="/blog/">Writing</a>
+          <a href="/blog/"{% if page.url contains '/blog' %} aria-current="page"{% endif %}>Writing</a>
           <a href="/about.html">About</a>
           <a class="pdf" href="/Kailash_Nelson_Resume.pdf">Resume</a>
           <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme">
@@ -49,25 +72,28 @@
       </div>
     </header>
 
+    {% unless page.layout == "post" %}
+    {% if page.title %}
+    <div class="hero">
+      <div class="wrap">
+        <h1 class="page-title">{{ page.title }}</h1>
+        {% if page.intro %}
+        <p class="page-intro">{{ page.intro }}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+    {% endunless %}
+
     <main id="main">
-      <div class="wrap error">
-        <h1>Page not found</h1>
-        <p>That URL is not on this site. The resume is on the home page if you want a place to start.</p>
-        <p>
-          <a href="/">Home</a>
-          ·
-          <a href="/projects.html">Projects</a>
-          ·
-          <a href="/blog/">Writing</a>
-          ·
-          <a href="/about.html">About</a>
-        </p>
+      <div class="wrap">
+        {{ content }}
       </div>
     </main>
 
     <footer class="site-footer">
       <div class="wrap footer-inner">
-        <p>&copy; 2026 Kailash Nelson. All rights reserved. Last updated <time id="last-updated" datetime="2026-09-04">September 4, 2026</time>.</p>
+        <p>&copy; 2026 {{ site.author }}. All rights reserved. Last updated <time id="last-updated" datetime="2026-09-04">September 4, 2026</time>.</p>
         <p><a href="mailto:kailashnelson1020@gmail.com">kailashnelson1020@gmail.com</a></p>
       </div>
     </footer>

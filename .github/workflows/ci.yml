@@ -17,6 +17,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      # Static HTML only. blog/index.html, _layouts/, and _posts/ are Liquid
+      # (built by GitHub Pages) and are excluded from html-validate.
       - name: Validate HTML
         run: npx --yes html-validate@9 index.html projects.html about.html 404.html
       - name: Check local links and assets
