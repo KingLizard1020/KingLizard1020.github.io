@@ -11,6 +11,7 @@ kramdown:
 permalink: /blog/:year/:month/:day/:title/
 lang: en
 author: Kailash Nelson
+# No gem theme. A theme would put a site title (and often a logo) in the header.
 defaults:
   - scope:
       path: ""

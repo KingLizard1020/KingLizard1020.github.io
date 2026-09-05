@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="KN">
-  <title>KN</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kailash Nelson">
+  <title>Kailash Nelson</title>
   <style>
-    rect { fill: #f3eee4; }
-    text { fill: #9c3d1e; }
+    rect.bg { fill: #f3eee4; }
+    rect.mark { fill: none; stroke: #9c3d1e; stroke-width: 6; }
     @media (prefers-color-scheme: dark) {
-      rect { fill: #16130f; }
-      text { fill: #e08a5c; }
+      rect.bg { fill: #16130f; }
+      rect.mark { stroke: #e08a5c; }
     }
   </style>
-  <rect width="64" height="64" rx="8"/>
-  <text x="32" y="44" text-anchor="middle" font-family="Georgia, serif" font-size="28">KN</text>
+  <rect class="bg" width="64" height="64" rx="8" />
+  <rect class="mark" x="10" y="10" width="44" height="44" rx="8" />
 </svg>
