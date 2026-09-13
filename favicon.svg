@@ -1,13 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kailash Nelson">
-  <title>Kailash Nelson</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="KN">
+  <title>KN</title>
   <style>
-    rect.bg { fill: #f3eee4; }
-    rect.mark { fill: none; stroke: #9c3d1e; stroke-width: 6; }
+    .bg { fill: #f3eee4; }
+    .letters { fill: #9c3d1e; }
     @media (prefers-color-scheme: dark) {
-      rect.bg { fill: #16130f; }
-      rect.mark { stroke: #e08a5c; }
+      .bg { fill: #16130f; }
+      .letters { fill: #e08a5c; }
     }
   </style>
-  <rect class="bg" width="64" height="64" rx="8" />
-  <rect class="mark" x="10" y="10" width="44" height="44" rx="8" />
+  <rect class="bg" width="64" height="64" rx="10"/>
+  <g class="letters">
+    <path transform="translate(-0.363 46.314) scale(0.021978 -0.021978)" d="M1361 107 1512 52V0H963V46L1085 96L599 642H388V756H617L1099 1253L943 1300V1352H1405V1300L1252 1249L697 700L744 792ZM463 1247V105L621 52V0H84V52L244 105V1247L84 1300V1352H623V1300Z"/>
+    <path transform="translate(29.967 46.314) scale(0.021978 -0.021978)" d="M246 105V1233L79 1301V1352H482L1263 252L1204 176V1247L1031 1300V1352H1481V1300L1322 1247V-13H1190L322 1210L364 1241V105L537 52V0H87V52Z"/>
+  </g>
 </svg>
